@@ -169,7 +169,7 @@ export class PortfolioComponent implements OnInit {
             fill: true,
             tension: 0.1,
             pointRadius: 0,
-            yAxisID: 'y1',
+            yAxisID: 'y',
             order: 3,
           },
           {
@@ -234,18 +234,6 @@ export class PortfolioComponent implements OnInit {
             grid: { color: '#f3f4f6' },
             ticks: {
               color: '#6b7280',
-              font: { size: 11 },
-            },
-          },
-          y1: {
-            type: 'linear',
-            display: true,
-            position: 'left',
-            min: -50,
-            max: 0,
-            grid: { drawOnChartArea: false },
-            ticks: {
-              color: '#d3380dff',
               font: { size: 11 },
             },
           },

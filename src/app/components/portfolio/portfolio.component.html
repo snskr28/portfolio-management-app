@@ -1,0 +1,83 @@
+<div class="portfolio-container">
+  <div class="header">
+    <h1 class="page-title">Trailing Returns</h1>
+    <button class="download-btn">↓</button>
+  </div>
+
+  <!-- Returns Table -->
+  <div class="returns-table-container">
+    <table class="returns-table">
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>YTD</th>
+          <th>1D</th>
+          <th>1W</th>
+          <th>1M</th>
+          <th>3M</th>
+          <th>6M</th>
+          <th>1Y</th>
+          <th>3Y</th>
+          <th>SI</th>
+          <th>DD</th>
+          <th>MAXDD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of portfolioData" [class]="getRowClass(item.name)">
+          <td class="name-cell">{{ item.name }}</td>
+          <td [class]="getValueClass(item.ytd)">{{ item.ytd }}</td>
+          <td [class]="getValueClass(item.oneD)">{{ item.oneD }}</td>
+          <td [class]="getValueClass(item.oneW)">{{ item.oneW }}</td>
+          <td [class]="getValueClass(item.oneM)">{{ item.oneM }}</td>
+          <td [class]="getValueClass(item.threeM)">{{ item.threeM }}</td>
+          <td [class]="getValueClass(item.sixM)">{{ item.sixM }}</td>
+          <td [class]="getValueClass(item.oneY)">{{ item.oneY }}</td>
+          <td [class]="getValueClass(item.threeY)">{{ item.threeY }}</td>
+          <td [class]="getValueClass(item.si)">{{ item.si }}</td>
+          <td [class]="getValueClass(item.dd)">{{ item.dd }}</td>
+          <td [class]="getValueClass(item.maxdd)">{{ item.maxdd }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="table-note">Note: Returns above 1 year are annualised</p>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="chart-section">
+    <div class="chart-header">
+      <h2>Equity curve</h2>
+      <div class="chart-controls">
+        <span class="chart-info">Live since 2019-01-01</span>
+        <span class="chart-type">₹ Trend</span>
+      </div>
+    </div>
+
+    <div class="date-controls">
+      <div class="date-input-group">
+        <label>From date</label>
+        <input
+          type="date"
+          [value]="fromDate"
+          (change)="onDateChange()"
+          [(ngModel)]="fromDate"
+          class="date-input"
+        />
+      </div>
+      <div class="date-input-group">
+        <label>To date</label>
+        <input
+          type="date"
+          [value]="toDate"
+          (change)="onDateChange()"
+          [(ngModel)]="toDate"
+          class="date-input"
+        />
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas #chartCanvas></canvas>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="app-container">
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">C</div>
+      <span class="logo-text">capitalmind</span>
+      <span class="premium">premium</span>
+    </div>
+
+    <ul class="nav-menu">
+      <li>
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-item"
+        >
+          <i class="icon home-icon"></i>
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/portfolios/focused"
+          routerLinkActive="active"
+          class="nav-item"
+        >
+          <i class="icon portfolio-icon"></i>
+          Portfolios
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-item">
+          <i class="icon experiments-icon"></i>
+          Experimentals
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-item">
+          <i class="icon archives-icon"></i>
+          Slack Archives
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-item">
+          <i class="icon refer-icon"></i>
+          Refer a friend
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-item">
+          <i class="icon gift-icon"></i>
+          Gift a subscription
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-item">
+          <i class="icon account-icon"></i>
+          Account
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

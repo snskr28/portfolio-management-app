@@ -1,59 +1,80 @@
-# PortfolioManagementApp
+# Portfolio Management App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+A web application for a portfolio management company. The app provides a simple interface with two main pages:
 
-## Development server
+- **Home Page:** Displays a collection of blogs.
+- **Portfolio Page:** Showcases portfolio statistics, including trading returns month-on-month for each year, and visualizes the equity curve and drawdown chart.
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
+- **Blog Section:** Read and browse company blogs on the home page.
+- **Portfolio Analytics:** View detailed statistics and charts based on historical data.
+- **Data Visualization:** Interactive charts for equity curve and drawdown.
+- **CSV Data Source:** Portfolio statistics are generated from the provided `historical_nav_report.csv` file.
+
+## Project Structure
+
+```
+src/
+  app/
+    components/
+      home/           # Home page components
+      portfolio/      # Portfolio page components
+    app.component.*   # Main app component files
+    app.config.ts     # App configuration
+    app.routes.ts     # Routing setup
+  assets/
+    data/
+      historical_nav_report.csv  # Portfolio data source
+  index.html
+  main.ts
+  styles.scss
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Getting Started
 
-## Code scaffolding
+### Prerequisites
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- [Angular CLI](https://angular.io/cli) (if using Angular)
 
-```bash
-ng generate component component-name
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/portfolio-management-app.git
+   cd portfolio-management-app
+   ```
+
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+### Running the App
+
+Start the development server:
+
+```sh
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The app will be available at `http://localhost:4200/`.
 
-```bash
-ng generate --help
+### Building for Production
+
+```sh
+npm run build
 ```
 
-## Building
+## Data Source
 
-To build the project run:
+- The app uses `src/assets/data/historical_nav_report.csv` as the data source for portfolio statistics and charts.
 
-```bash
-ng build
-```
+## License
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This project is licensed under the MIT License.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+*Developed for a portfolio management company to

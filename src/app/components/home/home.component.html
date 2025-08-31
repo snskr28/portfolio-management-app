@@ -1,0 +1,44 @@
+<div class="home-container">
+  <h1 class="page-title">Home</h1>
+
+  <!-- Action Cards -->
+  <div class="action-cards">
+    <div class="card">
+      <h3>Get started</h3>
+      <p>
+        Read our getting started guide to get the most out of your Capitalmind
+        subscription.
+      </p>
+      <a href="#" class="card-link">→</a>
+    </div>
+
+    <div class="card">
+      <h3>Community</h3>
+      <p>
+        Join the conversation on our exclusive community on Slack for
+        Capitalmind Premium subscribers
+      </p>
+      <a href="#" class="card-link">→</a>
+    </div>
+
+    <div class="card">
+      <h3>Visit website</h3>
+      <p>Keep up with our latest content on our website</p>
+      <a href="#" class="card-link">→</a>
+    </div>
+  </div>
+
+  <!-- Latest Posts -->
+  <section class="latest-posts">
+    <h2>Latest Posts</h2>
+
+    <div class="posts-grid">
+      <article class="post-card" *ngFor="let post of blogPosts">
+        <div class="post-date">{{ post.date }}</div>
+        <h3 class="post-title">{{ post.title }}</h3>
+        <p class="post-excerpt">{{ post.excerpt }}</p>
+        <a href="#" class="read-more">Read full post</a>
+      </article>
+    </div>
+  </section>
+</div>
